@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import Display from './Display';
 
-function App() {
-  return (
-     <h1 className="title">Hello World!</h1>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Display />
+    );
+  }
 }
 
 export default App;
