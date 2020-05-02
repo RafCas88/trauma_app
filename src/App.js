@@ -5,7 +5,7 @@ import Display from './Display';
 class App extends Component {
   render() {
     return (
-      <Display title='MECHANISM' />
+      <Display />
     );
   }
 }
