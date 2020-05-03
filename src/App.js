@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Display from './Display';
 
-const items = [
+const injuries = [
   {
     id: 1,
     value: 'ABRASION',
@@ -38,10 +38,13 @@ const items = [
 ];
 
 class App extends Component {
+
+
+
   render() {
     return (
       <div className='container'>
-      <Display items={items} />
+      <Display  injuries={injuries}/>
       </div>
     );
   }

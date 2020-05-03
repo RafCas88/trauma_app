@@ -1,9 +1,9 @@
 import React from 'react';
 import Popup from "reactjs-popup";
 
-function Display ({ items }) {
+function Display ({ injuries }) {
 
-  function handleOnClick(item) {}
+  function handleOnClick(injury) {}
 
 
 
@@ -11,9 +11,9 @@ function Display ({ items }) {
     <div className='injury-box'>
     <Popup trigger={<button> MECHANISM</button>} position="bottom center">
     <div>
-    {items.map(item => (
-      <button key={item.id} type="button" onClick={() => handleOnClick(item)}>
-      <span>{item.value}</span>
+    {injuries.map(injury => (
+      <button key={injury.id} type="button" onClick={() => handleOnClick(injury)}>
+      <span>{injury.value}</span>
       </button>
 
     ))}
