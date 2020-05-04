@@ -7,14 +7,16 @@ class Display extends React.Component{
     selectedInjury: this.props.injuries
   }
 
-   selectInjury = (injury) => this.setState({
+  selectInjury = (injury) => this.setState({
     selectedInjury: injury
   })
 
   render() {
     return (
       <div className='select-box-container'>
-      <div className='select-box-selected-injury'>{this.state.selectedInjury.value} {this.state.selectedInjury.subtitle}</div>
+      <div className='select-box-selected-injury'>{this.state.selectedInjury.value}
+      {this.state.selectedInjury.subtitle}
+      </div>
       <div className='injury-box'>
       <Popup trigger={<button> MECHANISM </button>} position="bottom center">
       <div>
@@ -33,10 +35,5 @@ class Display extends React.Component{
     )
   }
 }
-
-
-
-
-
 
 export default Display;
