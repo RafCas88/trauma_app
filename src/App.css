@@ -39,6 +39,7 @@
 
 .injury-box {
   text-align: center;
+  padding-top: 20px;
 
 }
 
@@ -54,10 +55,17 @@ button {
    text-align: center;
    border-left: 1px solid #ccc;
    border-right: 1px solid #ccc;
+   border-top: 1px solid #ccc;
 }
 
 .container {
   max-width: 140px;
   width: 100%;
   margin: auto;
+  padding-top: 20px;
+}
+
+.select-box-selected-injury {
+  background-color: dodgerblue;
+  color: white;
 }
