@@ -12,9 +12,9 @@ render() {
        <Popup trigger={<button> MECHANISM</button>} position="bottom center">
        <div>
     {this.state.injuries.map (injury => (
-      <div key={ injury.id }>
+      <button key={ injury.id }>
        {injury.value}
-      </div>
+      </button>
   ))}
   </div>
   </Popup>
