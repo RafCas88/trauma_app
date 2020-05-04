@@ -7,16 +7,16 @@ class Display extends React.Component{
     selectedInjury: this.props.injuries
   }
 
-  selectInjury = (injury) => this.setState({
+   selectInjury = (injury) => this.setState({
     selectedInjury: injury
   })
 
   render() {
     return (
-      <>
-      <div className='select-box-selected-injury'>{this.state.selectedInjury.value }</div>
+      <div className='select-box-container'>
+      <div className='select-box-selected-injury'>{this.state.selectedInjury.value} {this.state.selectedInjury.subtitle}</div>
       <div className='injury-box'>
-      <Popup trigger={<button> MECHANISM</button>} position="bottom center">
+      <Popup trigger={<button> MECHANISM </button>} position="bottom center">
       <div>
       {this.state.injuries.map (injury => (
         <button key={ injury.id }
@@ -29,7 +29,7 @@ class Display extends React.Component{
       </div>
       </Popup>
       </div>
-      </>
+      </div>
     )
   }
 }

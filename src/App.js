@@ -11,7 +11,7 @@ render() {
         {
           id: 1,
           value: 'ABRASION',
-          subtitle: 'dfds'
+          subtitle: 'mechanism of injury'
         },
         {
           id: 2,
@@ -19,34 +19,34 @@ render() {
           subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 3,
           value: 'BURN',
-          subtitle: 'dfdds'
+          subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 4,
           value: 'FROST',
-          subtitle: 'dfdsdass'
+          subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 5,
           value: 'GUN SHOT',
-          subtitle: 'dfdsfdfds'
+          subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 6,
           value: 'LACERATION',
-          subtitle: 'dfdssasdas'
+          subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 7,
           value: 'LTC',
-          subtitle: 'dfdsdasdas'
+          subtitle: 'mechanism of injury'
         },
         {
-          id: 2,
+          id: 8,
           value: 'STAB',
-          subtitle: 'dfdsyrtyrty'
+          subtitle: 'mechanism of injury'
         },
       ]}
       />

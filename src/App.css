@@ -68,4 +68,12 @@ button {
 .select-box-selected-injury {
   background-color: dodgerblue;
   color: white;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.selected {
+  background-color: dodgerblue;
+  color: white;
 }
