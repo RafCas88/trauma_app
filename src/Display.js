@@ -1,30 +1,27 @@
 import React from 'react';
 import Popup from "reactjs-popup";
 
-function Display ({ injuries }) {
+class Display extends React.Component{
+  state = {
+    injuries: this.props.injuries
+  }
 
-  function handleOnClick(injury) {}
-
-
-
+render() {
   return (
-    <div className='injury-box'>
-    <Popup trigger={<button> MECHANISM</button>} position="bottom center">
-    <div>
-    {injuries.map(injury => (
-      <button key={injury.id} type="button" onClick={() => handleOnClick(injury)}>
-      <span>{injury.value}</span>
-      </button>
-
-    ))}
-
-    </div>
-    </Popup>
-    </div>
-  )
-
+       <div className='injury-box'>
+       <Popup trigger={<button> MECHANISM</button>} position="bottom center">
+       <div>
+    {this.state.injuries.map (injury => (
+      <div key={ injury.id }>
+       {injury.value}
+      </div>
+  ))}
+  </div>
+  </Popup>
+  </div>
+)
 }
-
+}
 
 
 
