@@ -1,29 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Popup from "reactjs-popup";
 
-class Display extends React.Component{
-  state = {
-    injuries: this.props.injuries,
-    selectedInjury: this.props.injuries
+function Display ({ injuries, multiSelect = false}){
+ const [selection, setSelection] = useState([]);
+
+function selectInjury (injury) {
+  if(!selection.some(current=> current.id ===injury.id)) {
+    if(!multiSelect) {
+      setSelection([injury]);
+    } else if (multiSelect) {
+      setSelection([...selection, injury]);
+    }
   }
+}
 
-  selectInjury = (injury) => this.setState({
-    selectedInjury: injury
-  })
+ function isInjuryInSelection(injury) {
+   if (selection.some(current => current.id === injury.id))
 
-  render() {
+   {
+     return true;
+   }
+   return false;
+ }
+
     return (
       <div className='select-box-container'>
-      <div className='select-box-selected-injury'>{this.state.selectedInjury.value}
-      {this.state.selectedInjury.subtitle}
-      </div>
+      <p className='select-box-selected-injury'>{injuries.value}
+      {injuries.subtitle}
+      </p>
       <div className='injury-box'>
-      <Popup trigger={<button> MECHANISM </button>} position="bottom center">
+      <Popup
+      trigger={<button> MECHANISM </button>}
+      position="bottom center">
       <div>
-      {this.state.injuries.map (injury => (
-        <button key={ injury.id }
-        onClick={() => this.selectInjury(injury)}
-        className={this.state.selectedInjury === injury ? 'selected' : ''}
+      {injuries.map (injury => (
+        <button
+        key={ injury.id }
+        onClick={() => selectInjury(injury)}
+        className= {isInjuryInSelection(injury) && 'selected'}
         >
         {injury.value}
         </button>
@@ -34,6 +48,6 @@ class Display extends React.Component{
       </div>
     )
   }
-}
+
 
 export default Display;

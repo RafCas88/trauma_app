@@ -48,7 +48,7 @@ render() {
           value: 'STAB',
           subtitle: 'mechanism of injury'
         },
-      ]}
+      ]} multiSelect
       />
       </div>
     );
