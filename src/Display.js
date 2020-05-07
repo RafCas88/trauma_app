@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Popup from "reactjs-popup";
 
-function Display ({ injuries, multiSelect = false, subtitle}){
+function Display ({ injuries, multiSelect = false, subtitle }){
   const [selection, setSelection] = useState([]);
 
   function selectInjury (injury) {
