@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Popup from "reactjs-popup";
 
-function Display ({ injuries, multiSelect = false}){
+function Display ({ injuries, multiSelect = false, subtitle}){
   const [selection, setSelection] = useState([]);
 
   function selectInjury (injury) {
@@ -34,7 +34,7 @@ function Display ({ injuries, multiSelect = false}){
       onClick={() => selectInjury(injury)}
       className= {isInjuryInSelection(injury) && 'selected'}
       >
-      {injury.value}
+      {injury.value} {isInjuryInSelection(injury) && subtitle}
       </button>
     ))}
     </div>
